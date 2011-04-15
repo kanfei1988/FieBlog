@@ -17,7 +17,7 @@ Install Steps
 
 	7) The default username is admin, and password is admin123;
 
-	6) Enjoy!
+	8) Enjoy!
 
 
 Others
