@@ -153,8 +153,6 @@ class User_model extends CI_Model
 
 		$user_data['created'] = time();
 
-		$user_data['password'] = $this->do_hash($user_data['password']);
-
 		$this->db->insert('users', $user_data);
 
 		return ($this->db->affected_rows() > 0) ? $this->db->insert_id() : FALSE;
