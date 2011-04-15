@@ -1,0 +1,28 @@
+/*Don't underestimate the power of the dark side.. 
+
+- CSS for Internet Explorer 7 and lower - keeps the margins right*/
+
+*html #wrap {
+height:1%;
+width:expression(document.body.clientWidth > 800? "720px" : "auto");
+}
+*html #content {
+display:inline;
+}
+*html #sidebar {
+display:inline;
+word-wrap:break-word;
+}
+*html #sidebar ul {
+list-style-position:outside;
+margin:2px 0px;
+} 
+*html #sidebar h2 {
+margin:2px 0px;
+} 
+*html #sidebar div {
+margin:2px 1em 2px 1px;
+}
+*html .postcontent, *html .comment_text {
+font-size:1em;
+}

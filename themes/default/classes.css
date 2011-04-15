@@ -1,0 +1,50 @@
+/*classes css - so you don't loose them creatin child themes*/
+
+/*classes*/
+.center, .aligncenter, .centered {
+text-align: center;
+}
+.right, .alignright {
+float: right;
+}
+.left, .alignleft {
+float: left;
+}
+.none {
+display: none;
+}
+.righttxt {
+text-align:right;
+}
+.credits {
+clear:both;
+font-style:italic;
+}
+
+
+/*images*/
+img {
+border: none;
+margin: 2px;
+}
+img.center, img.aligncenter, img.centered {
+display:block;
+margin:5px auto;
+}
+img.alignright, img.right {
+margin-left: 5px;
+}
+img.alignleft, img.left  {
+margin-right: 5px;
+}
+img.rssimg {
+margin:0px;
+}
+.postcontent img {
+max-width:100%;
+overflow: hidden;
+}
+.wp-smiley {
+border:none;
+margin:0px;
+}

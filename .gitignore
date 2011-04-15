@@ -1,0 +1,7 @@
+application/logs/*
+!application/logs/index.html
+application/cache/*
+!application/cahce/index.html
+!application/cache/.htaccess
+application/uploads/*
+!application/uploads/index.html

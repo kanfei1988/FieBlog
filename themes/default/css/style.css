@@ -1,0 +1,470 @@
+/*
+Theme Name: Basic2Col
+Theme URI: http://wangenweb.com/wordpress/themes/basic2col/
+Description: A basic, yet flexible minimalistic two column theme for WordPress. Have extendend support for Child Themes for easier customization. See the <a href="http://wangenweb.com/wordpress/themes/basic2col/">Basic2Col's homepage</a> for more info
+Version: 3.1.2
+Author: Kristin K. Wangen
+Author URI: http://wangenweb.com/
+Tags: white, two column, basic, minimalistic, elastic width, custom page templates, right sidebar
+*/
+
+/*general layout*/
+body {
+background:#fff;
+color : #111;
+font-family :Verdana, 'Lucida Sans Unicode', 'Lucida Sans', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Sans Vera', 
+Arial, Verdana, Tahoma, Helvetica, Sans-Serif; 
+font-style : ;
+padding:2px 2em;
+margin:0px;
+line-height:1.5em;
+font-size:12px;
+text-align:center;
+}
+hr {
+border: 1px solid #ccc;
+} 
+blockquote, code, pre {
+color:#333;
+}
+code, pre {
+font-family:Courier,  'Lucida Console','Courier New', Sans-Serif;
+}
+
+/*font styles*/
+p {
+font-size : 1em; 
+font-style : normal; 
+padding: 0px;
+} 
+h2 {
+font-size : 1.4em; 
+}
+h3 {
+font-size:1.2em;
+}
+h4, h5, h6 {
+font-size:1em;
+}
+h2, h3, h1, h4, h5, h6 {
+font-family :Georgia,'Trebuchet MS', 'Lucida Sans',  'Lucida Grande', 'Bitstream Sans Vera', 
+		Verdana, Arial, Tahoma, Helvetica, Sans-Serif; 
+color : #333; 
+margin: 10px 0px;
+padding:2px 0px;
+clear: both;
+}
+
+
+/*linkcolor*/
+a:link, a:visited {
+font-weight:normal;
+/*color : #600;*/
+color : #CC0000;
+text-decoration : none; 
+
+}
+a:hover, a:active {
+/*color : #666; */
+color:#FFF;
+background-color:#CC0000;
+text-decoration : none;
+border:none;
+} 
+
+
+#content h2 a:link, #content h2 a:visited, #header h1 a:link, #header h1 a:visited, #content h3 a:link, #content h3 a:visited  {
+/*color:#333;*/
+color:#CC0000;
+font-weight:normal;
+text-decoration:none;
+border:none;
+}
+#content h2 a:hover, #content h2 a:active, #header h1 a:hover, #header h1 a:active, #content h3 a:hover, #content h3 a:active {
+/*color:#999;*/
+color:#FFF;
+}
+
+
+/*classes - these are also located in classes.css so child themes don't loose them*/
+.center, .aligncenter, .centered {
+text-align: center;
+}
+.right, .alignright {
+float: right;
+}
+.left, .alignleft {
+float: left;
+}
+.none {
+display: none;
+}
+.righttxt {
+text-align:right;
+}
+.credits {
+clear:both;
+font-style:italic;
+}
+
+
+/*images these are also located in classes.css so child themes don't loose them*/
+img {
+border: none;
+margin: 2px;
+}
+img.center, img.aligncenter, img.centered {
+display:block;
+margin:5px auto;
+}
+
+img.alignright, img.right {
+margin-left: 5px;
+}
+img.alignleft, img.left  {
+margin-right: 5px;
+}
+img.rssimg {
+margin:0px;
+}
+.postcontent img {
+max-width:100%;
+overflow: hidden;
+}
+.wp-smiley {
+border:none;
+margin:0px;
+}
+
+
+/*border-colors*/
+.postcontent img {
+border:1pt solid #eee;
+}
+
+.border {
+border: 1px solid #ccc;
+}
+
+/*wrap and header*/
+#accessnav {
+display:none;
+}
+
+#wrap {
+background : transparent;
+max-width:75em; 
+margin:5px auto;
+padding:0px;
+text-align:left;
+}
+
+/*navigation*/
+#navigation ul {
+list-style-type:none;
+margin:15px 0 20px 0;
+}
+#navigation ul li{
+float:left;
+margin-right:15px;
+}
+#navigation ul li a{
+	font-size:14px;
+	padding:2px 5px;
+}
+
+
+/*header*/
+#header {
+clear:both;
+background : transparent;
+border-top:1px solid #ccc;
+border-bottom:1px solid #ccc;
+margin:4px 4px 0px;
+padding:25px 10px;
+}
+#header h1{
+padding:0px;
+font-size:2em;
+display:inline;
+}
+#header p {
+padding:0px;
+margin:2px 10px;
+font-size:1.1em;
+display:inline;
+}
+
+/*content and post settings*/
+
+#content{
+background : transparent;
+padding: 5px 1em;
+margin: 2px 0.1em 5px;
+width: 67%;
+float: left;
+font-size:1.1em;
+}
+
+.post h2, .archives h3, .search h3 {
+border-bottom: 1pt solid #eee;
+}
+.post {
+margin: 5px 0px;
+}
+.postmeta {
+font-size:0.9em;
+clear:both
+}
+div.postmeta p {
+margin: 2px 0px;
+padding:0px;
+}
+.postmeta {
+margin: 10px 0px 5px;
+}
+.postcontent {
+/*line-height:1.6em;*/
+line-height:2em;
+}
+
+
+/*postnav*/
+#postnav {
+clear:both;
+margin:0px;
+}
+#postnav li {
+display:inline;
+margin: 2px 0px;
+}
+
+/*comments*/
+#commentbox {
+background : transparent;
+clear:both;
+margin:10px 0px;
+
+}
+ol#commentlist  {
+list-style-position: inside;
+margin:2px 0px;
+padding:0px;
+}
+#commentlist li{
+border-bottom:1pt solid #eee;
+margin: 10px 0px;
+}
+#commentform fieldset {
+padding:0;
+margin:0;
+}
+#commentform legend {
+font-family :Georgia,'Trebuchet MS', 'Lucida Sans',  'Lucida Grande', 'Bitstream Sans Vera', 
+		Verdana, Arial, Tahoma, Helvetica, Sans-Serif; 
+color : #333; 
+margin: 10px 0px 5px;
+padding:2px 0px;
+font-size:120%;
+}
+#commentform textarea {
+width:90%;
+}
+#commentform label, #commentform textarea {
+display:block;
+}
+#commentform input {
+width:50%;
+}
+#commentform input.submit {
+width:40%;
+margin:2px 0px;
+}
+.approve {
+border: 1pt solid #ccc;
+background : #eee;
+padding:5px;
+font-size:90%;
+}
+.comment_time {
+font-size:0.8em;
+text-align:right;
+clear:both;
+}
+#commentlist cite {
+font-style:normal;
+}
+
+#commentbox {
+border-top: 1pt solid #eee;
+}
+.avatar {
+float:right;
+border: 1pt solid #eee;
+margin-left:10px;
+padding:2px;
+}
+
+/*sidebar*/
+#sidebar {
+background : transparent;
+padding: 5px 0px;
+margin: 5px 0px;
+width: 25%;
+float:right;
+}
+#sidebar ul, #sidebar li{
+list-style-type: none;
+margin: 2px;
+padding:0px;
+}
+#sidebar li{
+margin:0px;
+padding: 2px 0px;
+}
+#sidebar div {
+margin: 2px;
+padding:0px;
+}
+#sidebar h2 {
+margin: 5px 0px 0px;
+padding: 4px 0px;
+font-size:100%;
+}
+#sidebar li a {
+border:none;
+}
+#sidebar li li {
+border-bottom: 1pt solid #eee;
+}
+#sidebar li li li {
+list-style:circle inside;
+border:none;
+margin-left:0px;
+}
+
+/*searchform*/
+#searchform label {
+font-weight:bold;
+}
+#searchform input#s {
+width:50%;
+}
+#searchform input.submit {
+width:30%;
+}
+
+/*Widgets fixing*/
+.widget_rss h2 a {
+color:#333;
+font-weight:bold;
+}
+.widget_rss img {
+margin:0px;
+}
+
+/*Callendar*/
+#wp-calendar a {
+font-weight:bold;
+}
+#today {
+background:#eee;
+}
+
+
+
+/*footer*/
+#footer {
+background : transparent;
+border-top:1px solid #ccc;
+margin:5px;
+clear: both;
+padding:5px 10px;
+text-align:center;
+}
+#footer ul{
+margin: 2px;
+padding:0px;
+}
+#footer li{
+display: inline;
+margin:0px 3px;
+}
+
+
+
+/*forms*/
+input , textarea, select, option {
+font-family :'Lucida Sans', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Sans Vera', 
+		Verdana, Arial, Tahoma, Helvetica, Sans-Serif; 
+font-size:100%;
+padding: 2px;
+background : #eee;
+color : #111; 
+border: 1px solid #ccc;
+margin: 2px;
+}
+fieldset, legend {
+background:transparent;
+color : #111; 
+border: none;
+padding: 5px;
+}
+label, legend {
+font-weight:normal;
+}
+
+
+/*lists*/
+ul {
+list-style-type: disc;
+list-style-position: outside;
+margin: 5px 2em;
+padding:2px;
+}
+ol { 
+list-style-position: outside;
+margin: 5px 2em;
+padding:2px;
+}
+
+/*tables*/
+table {
+color : #111; 
+width: 90%;
+margin: 5px auto;
+padding: 0px;
+font-size:1em;
+}
+caption {
+color: #333;
+font-weight: normal;
+padding: 5px;
+}
+td, th, tr {
+padding: 5px;
+text-align:left;
+}
+
+/* comments */
+#comments {list-style-type:none; margin:0px;}
+#comments li {margin:10px; border-bottom:1px dashed #c2c3ba;}
+#comments p {margin:10px;}
+#comments p.name {float:left; width:300px; color:#8d8d8d; font-size:13px;}
+#comments p.time {float:right; width:150px; text-align:right; color:#8d8d8d; font-size:13px;}
+#comments p.text {clear:both; line-height:24px;}
+#comments div.floor {clear:both; margin:0px 10px;}
+#comments div.box {border:1px solid #C2C2C2; margin:3px; background:#fffef5;}
+#comments p.reply {text-align:right;}
+#comments p.reply a {font-size:12px; text-decoration:none;}
+#respond {margin:10px; background:#F9F9F9; padding:10px;}
+#respond p {margin:0px;}
+#respond p.input, #respond p.textarea {text-align:center;}
+#respond p.button {text-align:right;}
+#respond input.text {width:23%;}
+#respond textarea {width:98%; height:100px; margin:5px 0px;}
+/* pagination */
+div.pagination {margin:20px 0; text-align:center;}
+div.pagination a {padding:2px 5px; margin:2px; border:1px solid #6C6C6C; text-decoration:none;}
+div.pagination span.current {padding:2px 5px; margin:2px; font-weight:bold;}
+div.pagination span.current, div.pagination a:hover, div.pagination a:active{background:#CC0000; border:1px solid #6C6C6C; color:#FFF;}

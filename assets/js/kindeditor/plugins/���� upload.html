@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Upload</title>
+		<style type="text/css" rel="stylesheet">
+			body {
+				margin: 0;
+				font:12px/1.5 "sans serif",tahoma,verdana,helvetica;
+				background-color:#F0F0EE;
+				color:#222222;
+				overflow:hidden;
+			}
+			label {
+				cursor:pointer;
+			}
+			.main {
+				margin: 0 10px;
+			}
+			.table {
+				list-style-image:none;
+				list-style-position:outside;
+				list-style-type:none;
+				margin:0;
+				padding:0;
+				display:block;
+			}
+			.table li {
+				padding:0;
+				margin-bottom:10px;
+				display:list-item;
+				line-height:1.5;
+			}
+			.table li label {
+				font-weight:bold;
+			}
+			.table li input {
+				vertical-align:middle;
+			}
+		</style>
+		<script type="text/javascript">
+			var KE = parent.KindEditor;
+			location.href.match(/\?id=([\w-]+)/i);
+			var id = RegExp.$1;
+			KE.event.ready(function() {
+				KE.util.pluginLang('upload', document);
+				KE.util.hideLoadingPage(id);
+			}, window, document);
+		</script>
+	</head>
+	<body>
+		<div class="main">
+			<iframe name="uploadIframe" id="uploadIframe" style="display:none;"></iframe>
+			<form name="uploadForm" enctype="multipart/form-data" method="post" target="uploadIframe" action="http://localhost/fieblog/index.php/admin/upload/upload_file">
+				<ul class="table">
+					<li>
+						<label for="url"><span id="lang.ulFile"></span></label>
+						<input type="file" name="upfile" id="upfile" style="width:80%;" />
+					</li>
+					<li>
+						<label for="width"><span id="lang.ulExp"></span></label>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>
