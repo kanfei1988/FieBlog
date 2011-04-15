@@ -1,19 +1,21 @@
-FieBlog is a open source personal blog system based on CodeIgniter Framework.
+FieBlog is an open source personal blog system based on CodeIgniter Framework.
 
 Install Steps
 ---------------------------------------------------------------
 
-	1) Upload the whole fieblog folder to your web directory, if you use windows, usually your directory folder name is htdocs.
+	1) Upload the whole fieblog folder to your web directory;
 
 	2) Open your MySQL Database and create a database named fieblog;
 
 	3) Import the sql script in ./install/Mysql.sql;
 
-	5) Modify ./application/config/database.php using your database parameters;
+	4) Modify ./application/config/database.php using your database parameters;
 
-	4) Modify the 'base_url' config in ./application/config/config.php;
+	5) Modify the base_url config in ./application/config/config.php;
 
-	5) Launch this web application from your web browser, if you are running from a localhost, go to http://localhost/fieblog
+	6) Launch this web application from your web browser, for example http://localhost/fieblog ;
+
+	7) The default username is admin, and password is admin123;
 
 	6) Enjoy!
 
