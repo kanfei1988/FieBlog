@@ -11,6 +11,7 @@ CREATE TABLE `comments` (
   `text` text NOT NULL default '',
   `type` varchar(16) NOT NULL default 'comment',
   `status` varchar(16) NOT NULL default 'approved',
+  `parent` int(10) unsigned NOT NULL default '0',
   PRIMARY KEY  (`cid`),
   KEY (`pid`),
   KEY (`created`)
