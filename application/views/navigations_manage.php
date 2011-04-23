@@ -40,7 +40,7 @@
 			<?php echo form_close();?>
 		</div>
 		<div class="right">
-			<?php echo form_open('admin/navigations/manage/'.(isset($navigation['nid'])?'/'.$navigation['nid']:''), 'class="meta_form"');?>
+			<?php echo form_open('admin/navigations/manage'.(isset($navigation['nid'])?'/'.$navigation['nid']:''), 'class="meta_form"');?>
 				<?php echo form_hidden('nid', (isset($navigation['nid'])?$navigation['nid']:'0'));?>
 				<ul>
 					<li>
